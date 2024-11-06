@@ -1,0 +1,18 @@
+# create new python env
+python3 -m venv db_proj_env
+
+# activate newly created python env
+source db_proj_env/bin/activate
+
+# install python dependencies
+pip3 install -r requirements.txt
+
+
+
+
+
+# config database connections in config.py file
+# execute below to setup env variable
+export FLASK_APP=app.py
+# run flask app
+python3 -m flask run

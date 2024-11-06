@@ -1,0 +1,625 @@
+{
+	"info": {
+		"_postman_id": "12892504-a428-4f0e-a447-d2f349362c98",
+		"name": "Flight Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39512438"
+	},
+	"item": [
+		{
+			"name": "Booking Management",
+			"item": [
+				{
+					"name": "Get All Bookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/bookings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Booking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/bookings/102",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								"102"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"booking_number\": 102,\n    \"customer_id\": 1,\n    \"booking_date\": \"2024-11-05 14:30:00\",\n    \"status\": \"confirmed\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/bookings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Booking",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\": 1,\n    \"booking_date\": \"2024-11-05 14:30:00\",\n    \"status\": \"Confirmed\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/bookings/100",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer Management",
+			"item": [
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/customers/15",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\": 100,\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"phone\": \"123-456-7890\",\n    \"date_of_birth\": \"1985-01-01\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Jane\",\n    \"last_name\": \"Doe\",\n    \"email\": \"jane.doe@example.com\",\n    \"phone\": \"098-765-4321\",\n    \"date_of_birth\": \"1990-02-02\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/customers/100",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flight Management",
+			"item": [
+				{
+					"name": "Get All Flights",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/flights",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"flights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Flight",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/flights/AA200",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"flights",
+								"AA200"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Airport Management",
+			"item": [
+				{
+					"name": "Get All Airports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/airports",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"airports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Airport",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/airports/{{airportCode}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"airports",
+								"{{airportCode}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket Management",
+			"item": [
+				{
+					"name": "Get All Tickets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tickets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Ticket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tickets/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new ticket",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"booking_number\": 1,\n    \"class_id\": 1,\n    \"flight_number\": \"DL100\",\n    \"passenger_id\": 1,\n    \"seat_number\": \"1A\",\n    \"ticket_number\": 15,\n    \"trip_type_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tickets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tickets"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST http://localhost:5000/api/tickets \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"ticket_number\": 1001,\n    \"booking_number\": 123,\n    \"passenger_id\": 456,\n    \"flight_number\": \"AB123\",\n    \"seat_number\": \"12A\",\n    \"class_id\": 1,\n    \"trip_type_id\": 2\n}'\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seat Management",
+			"item": [
+				{
+					"name": "Get All Seats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/seats",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"seats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Specific Seat by Flight Number and Seat Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/seats/DL100/1A",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"seats",
+								"DL100",
+								"1A"
+							]
+						},
+						"description": "Generated from cURL: curl -X GET http://localhost:5000/api/seats/{flightNumber}/{seatNumber}\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Seat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"seat_number\": \"A1\",\n    \"flight_number\": \"FL123\",\n    \"class_id\": 1,\n    \"is_available\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/seats",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"seats"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST http://localhost:5000/api/seats \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"seat_number\": \"A1\",\n    \"flight_number\": \"FL123\",\n    \"class_id\": 1,\n    \"is_available\": 1\n}'\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Update an Existing Seat by Flight Number and Seat Number",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"class_id\": 2,\n    \"is_available\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/seats/DL100/1A",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"seats",
+								"DL100",
+								"1A"
+							]
+						},
+						"description": "Generated from cURL: curl -X PUT http://localhost:5000/api/seats/{flightNumber}/{seatNumber} \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"class_id\": 2,\n    \"is_available\": 0\n}'\n"
+					},
+					"response": []
+				},
+				{
+					"name": "[Might not work] Delete a Seat by Flight Number and Seat Number",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/seats/DL100/1A",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"seats",
+								"DL100",
+								"1A"
+							]
+						},
+						"description": "Generated from cURL: curl -X DELETE http://localhost:5000/api/seats/{flightNumber}/{seatNumber}\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search and Filter",
+			"item": [
+				{
+					"name": "Search Bookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/bookings/search?status=confirmed",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								"search"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "confirmed"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/customers/search?name={{name}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{{name}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Flights",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/flights/search?origin={{origin}}&destination={{destination}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"flights",
+								"search"
+							],
+							"query": [
+								{
+									"key": "origin",
+									"value": "{{origin}}"
+								},
+								{
+									"key": "destination",
+									"value": "{{destination}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Tickets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tickets/search?bookingNumber={{bookingNumber}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"search"
+							],
+							"query": [
+								{
+									"key": "bookingNumber",
+									"value": "{{bookingNumber}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

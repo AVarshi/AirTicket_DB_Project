@@ -1,0 +1,258 @@
+{
+    "info": {
+        "name": "Flight Management API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Booking Management",
+            "item": [
+                {
+                    "name": "Get All Bookings",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/bookings"
+                    }
+                },
+                {
+                    "name": "Get Single Booking",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/bookings/{{bookingId}}"
+                    }
+                },
+                {
+                    "name": "Create New Booking",
+                    "request": {
+                        "method": "POST",
+                        "url": "{{base_url}}/api/bookings",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"customer_id\": 1, \"booking_date\": \"2024-11-04T00:00:00\", \"status\": \"confirmed\", \"tickets\": [], \"passengers\": [] }",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Update Booking",
+                    "request": {
+                        "method": "PUT",
+                        "url": "{{base_url}}/api/bookings/{{bookingId}}",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"status\": \"updated\" }",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Customer Management",
+            "item": [
+                {
+                    "name": "Get All Customers",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/customers"
+                    }
+                },
+                {
+                    "name": "Get Single Customer",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/customers/{{customerId}}"
+                    }
+                },
+                {
+                    "name": "Create New Customer",
+                    "request": {
+                        "method": "POST",
+                        "url": "{{base_url}}/api/customers",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"first_name\": \"John\", \"last_name\": \"Doe\", \"email\": \"john.doe@example.com\", \"phone\": \"1234567890\" }",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Update Customer",
+                    "request": {
+                        "method": "PUT",
+                        "url": "{{base_url}}/api/customers/{{customerId}}",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"email\": \"new.email@example.com\" }",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Flight Management",
+            "item": [
+                {
+                    "name": "Get All Flights",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/flights"
+                    }
+                },
+                {
+                    "name": "Get Single Flight",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/flights/{{flightNumber}}"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Airport Management",
+            "item": [
+                {
+                    "name": "Get All Airports",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/airports"
+                    }
+                },
+                {
+                    "name": "Get Single Airport",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/airports/{{airportCode}}"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Ticket Management",
+            "item": [
+                {
+                    "name": "Get All Tickets",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/tickets"
+                    }
+                },
+                {
+                    "name": "Get Single Ticket",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/tickets/{{ticketNumber}}"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Seat Management",
+            "item": [
+                {
+                    "name": "Get Available Seats",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/seats/{{flightNumber}}"
+                    }
+                },
+                {
+                    "name": "Reserve Seat",
+                    "request": {
+                        "method": "POST",
+                        "url": "{{base_url}}/api/seats/reserve",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"seat_number\": \"12A\", \"flight_number\": \"FL123\" }",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Search and Filter",
+            "item": [
+                {
+                    "name": "Search Bookings",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/bookings/search?status={{status}}"
+                    }
+                },
+                {
+                    "name": "Search Customers",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/customers/search?name={{name}}"
+                    }
+                },
+                {
+                    "name": "Search Flights",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/flights/search?origin={{origin}}&destination={{destination}}"
+                    }
+                },
+                {
+                    "name": "Search Tickets",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{base_url}}/api/tickets/search?bookingNumber={{bookingNumber}}"
+                    }
+                }
+            ]
+        }
+    ]
+}
